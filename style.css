@@ -1,0 +1,89 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-size: 30px;
+  color: white;
+}
+.container {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+
+  grid-template-columns: [first] 10% [line2] 15% [line3] auto [col4-start] 15% [five] 10% [end];
+  grid-template-rows: [row1-start] 10% [row1-end] 75% [third-line] auto [last-line];
+
+  /* grid-column-gap: 10px;
+  grid-row-gap: 15px; */
+
+  grid-template-areas:
+    "header-logo header-company-name header header-nav-controls header-nav-controls"
+    "main main main main main"
+    "footer footer footer footer footer";
+}
+.child1 {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+.child2 {
+  background-color: orange;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  grid-area: header-nav-controls;
+}
+.child3 {
+  background-color: pink;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  grid-area: footer;
+}
+.child4 {
+  background-color: blanchedalmond;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+.child5 {
+  background-color: limegreen;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+.child6 {
+  background-color: dodgerblue;
+  width: 100px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+.child7 {
+  background-color: silver;
+  width: 100px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  grid-area: header-company-name;
+}
+.child8 {
+  background-color: purple;
+  width: 100px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  grid-area: header-logo;
+}
